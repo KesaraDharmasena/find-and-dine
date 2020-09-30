@@ -1,0 +1,28 @@
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+    <span class="fnd__circle fnd__circle--light fnd__circle--top-right"></span>
+    <ion-slides pager #slides>
+
+        <ion-slide>
+            <img src="assets/slide-1.png" />
+            <h1>Capture your favourtie dish</h1>
+            <p class="fnd__font--light-grey">Just take a photo of the dish</p>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/slide-2.png" />
+            <h1>Cook at Home</h1>
+            <p class="fnd__font--light-grey">Checkout the recipe and cook <br/>at your favorite place...</p>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/slide-3.png" />
+            <h1>Dine with Family</h1>
+            <p class="fnd__font--light-grey">Enjoy you homemade with your loved ones...</p>
+        </ion-slide>
+
+    </ion-slides>
+    <div class="fnd__welcome-buttons">
+        <ion-button (click)="redirectToLogin()" class="fnd__skip-button" color="warning" fill="clear"> Skip </ion-button>
+        <ion-button (click)="slideNext()" class="fnd__next-button" color="warning" fill="clear"> {{getStartText}} </ion-button>
+    </div>
+</ion-content>

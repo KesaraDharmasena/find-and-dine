@@ -1,0 +1,24 @@
+<ion-content class="ion-padding fnd__toolbar" class="ion-padding" scroll-y="false">
+    <span class="fnd__circle fnd__circle--bright fnd__circle--top-left"></span>
+    <ion-button class="fnd__toolbar--back" (click)="goBack()" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <div class="fnd__container fnd__scroll">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <h2 class="fnd__title fnd__title--main">
+                        Nutrient Facts of <br/>
+                        <span [innerHTML]="[foodName]"></span>
+                    </h2>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="fnd__nutri-table" [innerHTML]="[foodData.nutrition]">
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

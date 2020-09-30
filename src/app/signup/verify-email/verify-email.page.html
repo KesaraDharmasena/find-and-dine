@@ -1,0 +1,28 @@
+<ion-content fullscreen class="ion-padding fnd__toolbar" scroll-y="false">
+    <ion-button class="fnd__toolbar--back" (click)="goBack()" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <div class="fnd__container">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <h2 class="fnd__title fnd__title--main">Verify your email</h2>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <h5 class="fnd__title fnd__font--light-grey">
+                        Please check your email and click on the link to verfiy your email address.
+                    </h5>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button (click)="authService.SendVerificationMail()" expand="block" color="warning" class="resend-btn">
+                        Resend Verification Email
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

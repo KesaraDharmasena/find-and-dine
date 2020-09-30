@@ -1,0 +1,32 @@
+<ion-header translucent>
+    <ion-toolbar color="warning">
+        <ion-title>Find and Dine</ion-title>
+        <ion-buttons slot="primary" color="dark">
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <div class="webcam-container" #webcamContainer></div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <div class="label-container" id="label-container"></div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <ion-button (click)="addPhotoToGallery()">
+                    <ion-icon slot="start" name="star"></ion-icon>
+                    Rescan
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- ion-fab markup  -->
+</ion-content>

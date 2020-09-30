@@ -1,0 +1,7 @@
+{
+    "name": "fine-and-dine",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "angular"
+}

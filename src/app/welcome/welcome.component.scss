@@ -1,0 +1,41 @@
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+}
+
+.swiper-slide {
+    display: block;
+}
+
+ion-slide>h2 {
+    margin-top: 2.8rem;
+}
+
+ion-slide>img {
+    max-height: 65%;
+    max-width: 65%;
+    margin-top: 116px;
+}
+
+ion-slides {
+    height: 100%;
+}
+
+.fnd {
+    &__next-button {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        z-index: 100;
+    }
+    &__skip-button {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 100;
+    }
+}
+
+.fnd__font--light-grey {
+    margin-top: 8px;
+}

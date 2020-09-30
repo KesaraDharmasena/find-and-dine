@@ -1,0 +1,23 @@
+<ion-content fullscreen class="ion-padding fnd__toolbar" scroll-y="false">
+    <ion-button class="fnd__toolbar--back" (click)="goBack()" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <div class="fnd__container">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <h2 class="fnd__title fnd__title--main">Offers</h2>
+                </ion-col>
+            </ion-row>
+            <div class="fnd__scroll">
+                <ion-row *ngFor="let offerItem of myOffers">
+                    <ion-col size="12">
+                        <a href="" [routerLink]="['/pages/offerdetails/' + offerItem.id]">
+                            <img src="{{offerItem.data().image}}" class="fnd__offers--card" />
+                        </a>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </div>
+</ion-content>

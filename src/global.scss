@@ -1,0 +1,355 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* custom styles */
+
+@font-face {
+    font-family: SFPro;
+    src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype'), url('assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+html,
+body {
+    --ion-font-family: SFPro;
+}
+
+.swiper-pagination-bullet {
+    background: #FFCA40;
+}
+
+ion-content {
+    --background: #fff;
+    --color: #000;
+}
+
+ion-header {
+    &::after {
+        background-image: none !important;
+    }
+}
+
+ion-menu-button {
+    --color: #000;
+}
+
+ion-item {
+    --background: #f5f6f9;
+    --color: #000;
+    --border-radius: 15px;
+    --border-style: none;
+}
+
+ion-toolbar {
+    --background: transparent;
+}
+
+ion-list {
+    background: transparent !important;
+}
+
+ion-tab-bar {
+    background: #484848;
+    border: none;
+}
+
+ion-tab-button {
+    background: #484848;
+    color: #fff;
+}
+
+ion-button {
+    --border-radius: 25px;
+}
+
+ion-searchbar {
+    --background: #fff !important;
+    --color: #000 !important;
+    --border-radius: 15px !important;
+}
+
+.fnd {
+    &__scan {
+        &--result {
+            visibility: hidden;
+            height: 0px;
+            &.active {
+                visibility: visible;
+                height: auto;
+                padding-bottom: 145px;
+            }
+        }
+        &--link {
+            text-decoration: none;
+            color: #000;
+        }
+        &--video-title {
+            font-size: 11px;
+            margin: 0;
+            font-weight: 700;
+        }
+        &--video-description {
+            font-size: 10px;
+            margin: 0;
+            margin-top: 3px;
+            color: #484848;
+        }
+        &--videobox {
+            border: thin solid #9c9c9c;
+            border-radius: 10px;
+            border-left: 8px solid #E29B35;
+        }
+    }
+    &__circle {
+        height: 375px;
+        width: 375px;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        &--light {
+            background-color: #E29B35;
+            opacity: 0.3;
+        }
+        &--bright {
+            background-color: #E29B35;
+        }
+        &--top-right {
+            top: -72px;
+            right: -92px;
+        }
+        &--top-left {
+            top: -62px;
+            left: -50px;
+        }
+    }
+    &__container {
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding: 20px;
+        top: 60px;
+        left: 0;
+        border-radius: 42px 42px 0px 0px;
+        box-shadow: 0 -6px 5px -3px rgba(0, 0, 0, 0.23);
+        &--fullwidth {
+            padding: 15px;
+        }
+    }
+    &__label-container {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    &__dashboard {
+        margin-top: 15px;
+        ion-card {
+            --background: #fff;
+            border-radius: 25px;
+            padding: 12px;
+            margin-inline-start: 5px !important;
+            margin-inline-end: 5px !important;
+            margin: 4px 18px;
+        }
+        ion-card-content,
+        ion-card-header {
+            padding: 5px;
+        }
+        ion-card-title {
+            --color: #000;
+            text-align: center;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        &--scan-btn {
+            display: none;
+            background: #FFCA40;
+            background: #FFCA40;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            color: #000;
+            width: 85px;
+            height: 85px;
+            position: fixed;
+            z-index: 100;
+            bottom: 3px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            &:before {
+                background: none;
+                border: 14px solid #484848;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                position: absolute;
+                top: -20px;
+                left: -20px;
+                right: -20px;
+                bottom: -20px;
+                pointer-events: none;
+            }
+            ion-icon {
+                font-size: 35px;
+            }
+        }
+    }
+    &__toolbar {
+        --background: #ffdca8;
+        &--button {
+            --color: #000;
+            float: right;
+            display: inline-block;
+            font-weight: 700;
+        }
+        &--back {
+            --color: #000;
+            display: inline-block;
+        }
+    }
+    &__font {
+        &--light-grey {
+            color: #484848;
+        }
+    }
+    &__button {
+        &--google {
+            --background: #48A8E6;
+        }
+        &--fb {
+            --background: #044CAC;
+        }
+        &--basic {
+            --background: #dfdfdf;
+            --border-color: #424242;
+            --color: #000;
+        }
+    }
+    &__title {
+        text-align: center;
+        &--main {
+            margin: 10px aut;
+        }
+        &--mini {
+            margin: 5px auto;
+        }
+        &--dashboard {
+            text-align: left;
+            font-weight: 700;
+            margin: 3px 10px;
+            line-height: 2rem;
+        }
+    }
+    &__webcam-container {
+        margin: 0 15px;
+        img {
+            border-radius: 15px
+        }
+    }
+    &__scroll {
+        overflow-y: auto;
+        height: calc(100vh - 60px);
+    }
+    &__history {
+        margin: 10px auto;
+        --background: #FFFFB1;
+        --border-radius: 8px;
+        border-left: 8px solid #E29B35;
+        border-radius: 16px;
+        font-weight: 700;
+        &--item {
+            font-size: 14px;
+            color: #484848;
+            font-weight: 500;
+        }
+        ion-icon {
+            color: #E29B35;
+        }
+    }
+    &__drawer {
+        ion-toolbar {
+            height: 120px;
+        }
+        ion-title {
+            margin-top: 25px;
+            text-align: center;
+        }
+        &--footer {
+            position: absolute;
+            bottom: 0;
+            height: 60px;
+            background-color: #FFE49C;
+            color: #A40606;
+            text-align: center;
+            line-height: 4rem;
+            width: 100%;
+        }
+        ion-item-divider {
+            --background: transparent;
+            border: none;
+        }
+    }
+    &__nutri-table {
+        table {
+            width: 100%
+        }
+        tr {
+            border: 5px dashed #d7d8da;
+        }
+        td {
+            padding: 12px;
+            &:first-child {
+                font-weight: 700;
+                background-color: #f2f2f2;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.scan__toggle {
+    ion-button {
+        --background: transparent;
+        --color: #000;
+        font-size: 13px;
+        &.active {
+            border-bottom: 3px solid #FFCA40;
+        }
+    }
+}
+
+@media screen and (height: 100vh) {
+    .fnd__dashboard--scan-btn {
+        display: block;
+    }
+}

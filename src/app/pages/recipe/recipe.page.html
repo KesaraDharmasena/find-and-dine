@@ -1,0 +1,70 @@
+<ion-content class="ion-padding fnd__toolbar" class="ion-padding" scroll-y="false">
+    <span class="fnd__circle fnd__circle--bright fnd__circle--top-left"></span>
+    <ion-button class="fnd__toolbar--back" (click)="goBack()" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <div class="fnd__container fnd__container--fullwidth">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="nutrition-info">
+                        <div class="fnd__label-container" id="label-container">{{myFoodName}}</div>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <div class="fnd__scroll">
+                <ion-row>
+                    <ion-col size="12">
+                        <div class="fnd__webcam-container" #webcamContainer>
+                            <img src="{{myRecipe.image}}" />
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-grid>
+                        <ion-row class="scan__toggle">
+                            <ion-col size="4">
+                                <ion-button expand="full" fill="clear" (click)="showIngredients()" [class]="{'active': isIngrediants}">Ingredients</ion-button>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-button expand="full" fill="clear" (click)="showRecipe()" [class]="{'active': isRecipeBox}">Steps</ion-button>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-button expand="full" fill="clear" (click)="showVideoBox()" [class]="{'active': isVideoBox}">Videos</ion-button>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <div class="fnd__scan--result fnd__scan--ingredients" #ingredientsBox [class]="{'active': isIngrediants}" [innerHTML]="[myRecipe.ingredients]">
+
+                            </div>
+                            <div class="fnd__scan--result fnd__scan--recipe" #recipeBox [class]="{'active': isRecipeBox}" [innerHTML]="[myRecipe.steps]"></div>
+                            <div class="fnd__scan--result fnd__scan--video" #videoBox [class]="{'active': isVideoBox}">
+                                <ion-grid>
+                                    <ion-row *ngFor="let videoItem of ytVideos">
+                                        <ion-col size="12">
+                                            <a href="https://www.youtube.com/watch?v={{videoItem.id.videoId}}" class="fnd__scan--link">
+                                                <div class="fnd__scan--videobox">
+                                                    <ion-grid>
+                                                        <ion-row>
+                                                            <ion-col size="8">
+                                                                <h4 class="fnd__scan--video-title">{{videoItem.snippet.title}}</h4>
+                                                                <p class="fnd__scan--video-description">{{videoItem.snippet.channelTitle}}</p>
+                                                            </ion-col>
+                                                            <ion-col size="4">
+                                                                <img src="{{videoItem.snippet.thumbnails.medium.url}}" alt="" class="fnd__scan--thmb">
+                                                            </ion-col>
+                                                        </ion-row>
+                                                    </ion-grid>
+                                                </div>
+                                            </a>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </div>
+                        </ion-row>
+                    </ion-grid>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </div>
+</ion-content>

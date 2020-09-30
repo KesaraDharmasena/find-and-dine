@@ -1,0 +1,59 @@
+<ion-content fullscreen class="ion-padding fnd__toolbar" scroll-y="false">
+    <ion-button class="fnd__toolbar--button" (click)="goToSignup()" fill="clear">
+        Signup
+    </ion-button>
+    <div class="fnd__container">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <h1 class="fnd__title fnd__title--main">Welcome Back!</h1>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-input type="email" placeholder="Email" #email></ion-input>
+                        <span item-right><ion-icon name="mail-outline"></ion-icon></span>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-input type="password" placeholder="Password" #password></ion-input>
+                        <span item-right><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button expand="block" color="warning" (click)="logIn(email, password)" class="fnd__login-btn">
+                        Login
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button expand="block" color="warning" fill="clear" (click)="forgetPassword()">
+                        Forgot Password
+                    </ion-button>
+                    <p class="fnd__title fnd__title--mini fnd__font--light-grey">or</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button expand="block" class="fnd__button--google" (click)="signInWithGoogle()">
+                        <ion-icon slot="start" name="logo-google"></ion-icon> Google
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button expand="block" class="fnd__button--fb" (click)="signInWithFacebook()">
+                        <ion-icon slot="start" name="logo-facebook"></ion-icon> Facebook
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

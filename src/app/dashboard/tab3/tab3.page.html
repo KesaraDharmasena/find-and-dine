@@ -1,0 +1,61 @@
+<ion-content class="ion-padding fnd__toolbar" class="ion-padding" scroll-y="false">
+    <span class="fnd__circle fnd__circle--bright fnd__circle--top-left"></span>
+    <div class="fnd__container">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <h2 class="fnd__title fnd__title--main">{{pageTitle}}</h2>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-input type="text" value="{{myUser.displayName}}" #myName [readonly]="!isEditMode"></ion-input>
+                        <span item-right><ion-icon name="person-outline"></ion-icon></span>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-input type="text" value="{{myUser.email}}" #myEmail [readonly]="!isEditMode"></ion-input>
+                        <span item-right><ion-icon name="mail-outline"></ion-icon></span>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-input type="text" value="{{myUser.phone}}" #myPhone [readonly]="!isEditMode"></ion-input>
+                        <span item-right><ion-icon name="call-outline"></ion-icon></span>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-input type="text" value="{{myUser.country}}" #myCountry [readonly]="!isEditMode"></ion-input>
+                        <span item-right><ion-icon name="location-outline"></ion-icon></span>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="fnd-spacer"></div>
+                    <ion-button expand="block" color="warning" (click)="editData()" *ngIf="!isEditMode">Edit Profile</ion-button>
+                    <ion-button expand="block" color="warning" (click)="saveData()" *ngIf="isEditMode">Save</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button expand="block" (click)="cancelEdit()" *ngIf="isEditMode" class="fnd__button--basic">Cancel</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button expand="block" (click)="logoutApp()" class="fnd__button--basic logout-btn" *ngIf="!isEditMode">Logout</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>
